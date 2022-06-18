@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    class Numbers {
+        
+        constructor() {
+           let describe;
+           let name;
+           console.log("123 con ga");
+        }
+        static test(numb = 1) {
+            return numb*3;
+        }
+        helloUser(){
+            console.log("hello");
+        }
+    }
+    class Geometry extends Numbers{
+        constructor(){
+            super();// sẽ gọi contrsucter cua cha: Numbers
+        }
+
+    }
+    let a = new Geometry;
+    a.helloUser();
+</script>
