@@ -14,34 +14,25 @@
 
 </html>
 <script>
-    const birds = [{
-            "ID": "DV8",
-            "Name": "Eurasian Collared-Dove",
-            "Type": "Dove"
-        },
-        {
-            "ID": "HK12",
-            "Name": "Bald Eagle",
-            "Type": "Hawk"
-        },
-        {
-            "ID": "HK6",
-            "Name": "Cooper's Hawk",
-            "Type": "Hawk"
-        },
-        {
-            "ID": "SP11",
-            "Name": "Bell's Sparrow",
-            "Type": "Sparrow"
-        },
-        {
-            "ID": "DV2",
-            "Name": "Mourning Dove",
-            "Type": "Dove"
-        }
-    ];
-    const newSet = new Set();
-    newSet.add("abc");
-    newSet.add("váds")
-    console.log(newSet);
+    const animalSet = new Set(["cheetah", "tiger", "lion", "bird","elephant","dog"]);
+   function addToSet(setName,animal) {
+    setName.add(animal)
+   }
+   function removeFromSet(setName,animal) {
+    setName.delete(animal)
+   }
+   function hasInSet(setName,animal) {
+    if (setName.has(animal)) {
+        alert( animal +" was in the zoo before")
+    }
+   }
+   function printZooList(setName) {
+    setName.forEach(animal => {
+        document.write(animal+"</br>")
+    });
+   }
+   addToSet(animalSet,"fish");
+   removeFromSet(animalSet,"bird");
+   printZooList(animalSet);
+   hasInSet(animalSet,"cheetah")
 </script>
